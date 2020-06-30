@@ -1,0 +1,1 @@
+vue.js frontend that displays the informative cards and the main charts that the mexican government reports every day
