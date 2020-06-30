@@ -23,7 +23,7 @@ def unzipFile(request):
     os.rename(archivo[0],"data.csv")    
     
 if __name__=='__main__':
-    #archivo=downloadFile()    
+    archivo=downloadFile()    
     bd.insertFile()
     bd.updateAcumulados()
     bd.updateAcumSeries()
