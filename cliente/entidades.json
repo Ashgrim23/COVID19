@@ -1,0 +1,134 @@
+[
+    {
+        "ID_ENT": 0,
+        "NOMBRE": "Estados Unidos Mexicanos"
+    },
+    {
+        "ID_ENT": 1,
+        "NOMBRE": "Aguascalientes"
+    },
+    {
+        "ID_ENT": 2,
+        "NOMBRE": "Baja California"
+    },
+    {
+        "ID_ENT": 3,
+        "NOMBRE": "Baja California Sur"
+    },
+    {
+        "ID_ENT": 4,
+        "NOMBRE": "Campeche"
+    },
+    {
+        "ID_ENT": 5,
+        "NOMBRE": "Coahuila de Zaragoza"
+    },
+    {
+        "ID_ENT": 6,
+        "NOMBRE": "Colima"
+    },
+    {
+        "ID_ENT": 7,
+        "NOMBRE": "Chiapas"
+    },
+    {
+        "ID_ENT": 8,
+        "NOMBRE": "Chihuahua"
+    },
+    {
+        "ID_ENT": 9,
+        "NOMBRE": "Ciudad de Mexico"
+    },
+    {
+        "ID_ENT": 10,
+        "NOMBRE": "Durango"
+    },
+    {
+        "ID_ENT": 11,
+        "NOMBRE": "Guanajuato"
+    },
+    {
+        "ID_ENT": 12,
+        "NOMBRE": "Guerrero"
+    },
+    {
+        "ID_ENT": 13,
+        "NOMBRE": "Hidalgo"
+    },
+    {
+        "ID_ENT": 14,
+        "NOMBRE": "Jalisco"
+    },
+    {
+        "ID_ENT": 15,
+        "NOMBRE": "Mexico"
+    },
+    {
+        "ID_ENT": 16,
+        "NOMBRE": "Michoacan de Ocampo"
+    },
+    {
+        "ID_ENT": 17,
+        "NOMBRE": "Morelos"
+    },
+    {
+        "ID_ENT": 18,
+        "NOMBRE": "Nayarit"
+    },
+    {
+        "ID_ENT": 19,
+        "NOMBRE": "Nuevo Leon"
+    },
+    {
+        "ID_ENT": 20,
+        "NOMBRE": "Oaxaca"
+    },
+    {
+        "ID_ENT": 21,
+        "NOMBRE": "Puebla"
+    },
+    {
+        "ID_ENT": 22,
+        "NOMBRE": "Queretaro"
+    },
+    {
+        "ID_ENT": 23,
+        "NOMBRE": "Quintana Roo"
+    },
+    {
+        "ID_ENT": 24,
+        "NOMBRE": "San Luis Potosi"
+    },
+    {
+        "ID_ENT": 25,
+        "NOMBRE": "Sinaloa"
+    },
+    {
+        "ID_ENT": 26,
+        "NOMBRE": "Sonora"
+    },
+    {
+        "ID_ENT": 27,
+        "NOMBRE": "Tabasco"
+    },
+    {
+        "ID_ENT": 28,
+        "NOMBRE": "Tamaulipas"
+    },
+    {
+        "ID_ENT": 29,
+        "NOMBRE": "Tlaxcala"
+    },
+    {
+        "ID_ENT": 30,
+        "NOMBRE": "Veracruz de Ignacio de la Llave"
+    },
+    {
+        "ID_ENT": 31,
+        "NOMBRE": "Yucatan"
+    },
+    {
+        "ID_ENT": 32,
+        "NOMBRE": "Zacatecas"
+    }
+]
