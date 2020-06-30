@@ -19,7 +19,7 @@ def unzipFile(request):
         archivo=zip_ref.namelist()
         zip_ref.extractall("./")
     os.remove("file.zip")
-    print("Archivo descomprimiedo: "+archivo[0])
+    print("Archivo descompreso: "+archivo[0])
     os.rename(archivo[0],"data.csv")    
     
 if __name__=='__main__':
