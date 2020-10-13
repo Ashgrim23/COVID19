@@ -6,36 +6,30 @@ import credentials
 
 insertDataRow=( "INSERT INTO COVID.COVID19MX "
                 "(FECHA,ID_REGISTRO,ORIGEN,SECTOR,ENTIDAD,SEXO,MPIO,FECHA_INGRESO,FECHA_SINTOMA,FECHA_DEF,EDAD,RESULTADO) "
-                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"                
               )
 
+loadDataQry=("LOAD DATA  INFILE 'data.csv' INTO TABLE COVID.COVID19MX FIELDS TERMINATED BY ','"
+              "ENCLOSED BY '\"' IGNORE 1 LINES "
+              "(@col1,@col2,@col3,@col4,@col5,@col6,@col7,@col8,@col9,@col10,"
+              "@col11,@col12,@col13,@col14,@col15,@col16,@col17,@col18,@col19,@col20,"
+              "@col21,@col22,@col23,@col24,@col25,@col26,@col27,@col28,@col29,@col30,"
+              "@col31,@col32,@col33,@col34,@col35,@col36,@col37,@col38)"
+              "set FECHA=@col1,ID_REGISTRO=@col2,ORIGEN=@col3,SECTOR=@col4,ENTIDAD=@col8,"              
+              "SEXO=@col6,MPIO=@col9,FECHA_INGRESO=@col11,FECHA_SINTOMA=@col12,FECHA_DEF=IF(@col13='9999-99-99',NULL,@col13),"
+              "EDAD=@col16,RESULTADO=@col34"
+            )
 
-def insertFile():
-    with open('data.csv') as csv_file:
-      csv_reader=csv.reader(csv_file,delimiter=',')
-      cnx=mysql.connector.connect(**credentials.config)
-      cursor = cnx.cursor()
-      cursor.execute("TRUNCATE TABLE COVID.COVID19MX;")
-      cnx.commit()
-      print("Tabla Truncada")
-      linea=0
-      print("Insertando datos..")
-      for row in csv_reader:
-          if linea>0:
-            if (row[12]=='9999-99-99'):
-              FECHA_DEF=None
-            else:
-              FECHA_DEF=row[12]
-            datos=(row[0],row[1],row[2],row[3],row[7],row[5],row[8],
-                  row[10] ,row[11],FECHA_DEF,
-                  row[15],row[30])
-            cursor.execute(insertDataRow, datos)
-          linea+=1          
-      cnx.commit()
-      cursor.close()
-      cnx.close()
-      print(str(linea)+" Lineas Insertadas")
-    
+def loadFile():
+  print("lodeando tabla")
+  cnx=mysql.connector.connect(**credentials.config)
+  cursor = cnx.cursor()
+  cursor.execute("TRUNCATE TABLE COVID.COVID19MX;")
+  cursor.execute(loadDataQry)
+  cnx.commit()
+  print("tabla lodeada")
+  
+  
 
 def updateAcumulados():
   cnx=mysql.connector.connect(**credentials.config)

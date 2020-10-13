@@ -7,3 +7,4 @@ mypub.pub
 frontend
 credentials.py
 .env
+*.pyc 
