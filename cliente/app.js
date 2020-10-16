@@ -9,6 +9,7 @@ import "vuetify/dist/vuetify.min.css";
 import Card from "./componentes/Card.vue";
 import hstChart from "./componentes/hstChart.vue";
 
+axios.defaults.baseURL = "http://127.0.0.1:3000";
 Vue.use(Vuetify);
 Vue.use(VueMeta);
 

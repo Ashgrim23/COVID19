@@ -1,5 +1,8 @@
 const mysql =require('mysql');
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const conn=mysql.createConnection({
     host:process.env.COVID_HOST,
     user:process.env.COVID_USER,

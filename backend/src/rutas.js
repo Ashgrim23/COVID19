@@ -49,7 +49,7 @@ router.get('/api/v1/series/confirmados/:id',(req,res)=>{
                     where t.id_ent=? and t.SERIE='SOSPECHOSOS'
                     group by t.fecha) t2 on (t2.fecha=s.fecha)          
                 where ifnull(CONFIRMADOS,0)+ifnull(SOSPECHOSOS,0)>0
-                order by FECHA`,[id,id],(err,rows,fields)=>{
+                order by FECHA DESC LIMIT 200`,[id,id],(err,rows,fields)=>{
             if(!err){
                 res.json(rows)
             } else {
@@ -71,7 +71,7 @@ router.get('/api/v1/series/defunciones/:id',(req,res)=>{
             where t.id_ent=? and t.SERIE='DEFSOSP'
             group by t.fecha) t4 on (t4.fecha=s.fecha)  
         where ifnull(DEFUNCIONES,0)+ifnull(DEFSOSP,0)>0
-        order by FECHA`,[id,id],(err,rows,fields)=>{
+        order by FECHA DESC LIMIT 200`,[id,id],(err,rows,fields)=>{
             if(!err){
                 res.json(rows)
             } else {
@@ -110,7 +110,7 @@ router.get('/api/v1/series/municipios/:id',(req,res)=>{
         })
 })
 
-router.get('/api/v1/ultUpdate',(req,res)=>{
+router.get('/api/v1/ultUpdate',(req,res)=>{        
     conn.query('select FECHA from COVID.APPINFO limit 1',(err,rows,fields)=>{
         if (!err){
             res.json(rows)
